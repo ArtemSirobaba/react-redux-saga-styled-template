@@ -7,6 +7,7 @@ import {
   setResetCounter,
   getRandomNumber,
 } from "store/counter/action-creaters";
+import Button from "components/base/buttons/button";
 
 const Counter = () => {
   const dispatch = useDispatch();
@@ -38,14 +39,10 @@ const Counter = () => {
     <div>
       <h1>Counter: {count}</h1>
       <h1>Random number: {randomNumber}</h1>
-      <input type="submit" value="increment" onClick={handleIncrementCounter} />
-      <input type="submit" value="reset" onClick={handleResetCounter} />
-      <input type="submit" value="decrement" onClick={handleDecrementCounter} />
-      <input
-        type="submit"
-        value="random number"
-        onClick={handleGetRandomNumber}
-      />
+      <Button title="Increment" onClick={handleIncrementCounter} />
+      <Button title="Reset" onClick={handleResetCounter} />
+      <Button title="Decrement" onClick={handleDecrementCounter} />
+      <Button title="Random number" onClick={handleGetRandomNumber} />
     </div>
   );
 };
